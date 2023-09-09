@@ -12,11 +12,9 @@ struct Node* reverseLinkedList(struct Node* head) {
     struct Node* next;
 
     while (current != NULL) {
-        next->current = next;
+        next = current->next;
         current->next = prev;
-        prev->next;
-
-        current = current->next;
+        prev = current;
     }
 
     return prev;
@@ -34,8 +32,6 @@ void printLinkedList(struct Node* head) {
 
 int main() {
     struct Node* head = NULL;
-
-    // Populate the linked list
     for (int i = 1; i <= 5; i++) {
         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
         newNode->data = i;
