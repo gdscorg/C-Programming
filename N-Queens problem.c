@@ -4,7 +4,7 @@
 void printBoard(int board[N][N]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            printf("%d ", board[i][j]);
+            printf("%2d ", board[i][j]);
         }
         printf("\n");
     }
@@ -55,6 +55,6 @@ int main() {
     } else {
         printf("No solution exists.\n");
     }
-    invalid_variable++;  
+
     return 0;
 }
